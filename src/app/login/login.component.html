@@ -4,7 +4,9 @@
             <img src="../../assets/img/user.png" alt="rocket_contact" style="border-radius: 6rem; width: 90px; margin-top: -35px; background: #ffffff; padding: 20px;" />
         </div>
         <form>
-            <h3 style="text-align: center;background: #0E0A19;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-transform: uppercase;font-weight: bold;font-family: monospace;">Bem vindo</h3>
+            <h3 style="text-align: center;background: #0E0A19;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-transform: uppercase;font-weight: bold;font-family: monospace;">
+                Bem vindo
+            </h3>
 
             <div class="form-group " style="margin-bottom: 0;margin: 10px 20px;padding: 0;">
                 <label for="login">Login</label>
@@ -26,6 +28,10 @@
     </div>
 
     <div class="footer" style="position: fixed;bottom: 0;">
-        <p> HonoraTex <span style=" font-size: 12px; display: block; "> 2021 - © Todos os direitos reservados. </span></p>
+        <p> HonoraTex <span style=" font-size: 12px; display: block; "> 2021 - © Todos os direitos reservados. </span>
+        </p>
     </div>
 </div>
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate">
+</ngx-loading>

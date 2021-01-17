@@ -9,7 +9,7 @@ import { BuscarCepService } from 'src/app/buscar-cep.service';
 })
 export class BuscarComponent implements OnInit {
 
-  public cep: any ;
+  public cep: any;
 
   public loading = false;
 
@@ -21,7 +21,7 @@ export class BuscarComponent implements OnInit {
   public cepvalor: any;
 
   buscarCep() {
-    
+
     this.loading = true;
 
     var ceps = (<HTMLInputElement><unknown>document.getElementById("cep")).value;
@@ -33,8 +33,6 @@ export class BuscarComponent implements OnInit {
     setTimeout(() => {
       this.loading = false;
     }, 600);
-    
-    // this.cep = new this.cep;
 
     console.log(this.cep)
   }
@@ -45,7 +43,7 @@ export class BuscarComponent implements OnInit {
   }
 
   listar() {
-    this.BuscarCepService.listar(this.cepvalor).forEach(dados => this.cep = dados )
+    this.BuscarCepService.listar(this.cepvalor).forEach(dados => this.cep = dados)
   }
 
 }

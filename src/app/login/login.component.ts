@@ -12,8 +12,8 @@ export class LoginComponent implements OnInit {
 
   public usuario: string;
   public senha: string;
-
   public result: any;
+  public loading = false;
 
   constructor(private accountservice: AccountService, private router: Router, private BuscarCepService: BuscarCepService) { }
 
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   loginAPI() {
 
-    // this.loading = true;
+    this.loading = true;
 
     var usuarioAng = (<HTMLInputElement><unknown>document.getElementById("usuarioAng")).value;
 
@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit {
       } else {
         console.log(this.result)
       }
-    }, 600);
+    
+      this.loading = false;
+    }, 1000);
 
     // this.cep = new this.cep;
 

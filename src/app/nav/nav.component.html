@@ -4,20 +4,10 @@
         <a class="closeOffcanvas" (click)="closeOffcanvas()">×</a>
         <a [routerLink]="['/home']">Home</a>
         <a [routerLink]="['/buscar-cep']">Buscar Cep</a>
-        <a>Cadastrar Contato</a>
-        <a>Contatos</a>
+        <!-- <a>Cadastrar Contato</a>
+        <a>Contatos</a> -->
     </div>
-    <button style="font-size: 30px;
-    cursor: pointer;
-    background: none;    border: none;
-    
-    padding: 10px 25px;
-    color: #ffffff;" (click)="openNav3();openOffcanvas()"> &#9776; </button>
+    <button style="font-size: 30px;cursor: pointer;background: none; border: none;padding: 10px 25px;color: #ffffff;" (click)="openNav3();openOffcanvas()"> &#9776; </button>
 
-    <button type="submit" class="btn btn-primary" style=" float: right; font-size: 30px;
-cursor: pointer;
-background: none;    border: none;
-
-padding: 10px 25px;
-color: #ffffff;" (click)="onLogout()"> &#9938;</button>
+    <button class="btn btn-primary" style=" float: right; font-size: 30px;cursor: pointer;background: none;border: none;padding: 10px 25px;color: #ffffff;" (click)="onLogout()"> &#9938;</button>
 </div>

@@ -12,25 +12,25 @@ export class BuscarCepService {
   public error: any = "";
 
   constructor(private http: HttpClient) { }
-  
 
-  listar(cepvalor){
+
+  listar(cepvalor) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
         'Accept': 'application/json'
       })
     };
-    return this.http.get(this.cepUrl + 'BuscarCep/' + cepvalor, httpOptions) 
+    return this.http.get(this.cepUrl + 'BuscarCep/' + cepvalor, httpOptions)
   }
 
-   logar(usuario: string, senha: string){
-     const httpOptions = {
-       headers: new HttpHeaders({
+  logar(usuario: string, senha: string) {
+    const httpOptions = {
+      headers: new HttpHeaders({
         'Content-Type': 'application/x-www-form-urlencoded',
-         'Accept': 'application/json'
-       })
-     };
-     return this.http.get(this.cepUrl + 'values?login=' + usuario +'&senha='+ senha, httpOptions) 
-   }
+        'Accept': 'application/json'
+      })
+    };
+    return this.http.get(this.cepUrl + 'usuario?login=' + usuario + '&senha=' + senha, httpOptions)
+  }
 }

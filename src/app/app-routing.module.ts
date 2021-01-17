@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {BuscarComponent  } from '../app/buscar/buscar.component';
+import { BuscarComponent } from '../app/buscar/buscar.component';
 import { HomeComponent } from '../app/home/home.component';
 import { LoginComponent } from '../app/login/login.component'
 import { AuthGuard } from './account/shared/auth.guard';
@@ -14,9 +14,9 @@ const routes: Routes = [
     path: '',
     component: IndexComponent,
     children: [
-      {path: '',component: HomeComponent},
-      {path: 'home',component: HomeComponent},
-      {path: 'buscar-cep', component: BuscarComponent}
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'buscar-cep', component: BuscarComponent }
     ],
     canActivate: [AuthGuard]
   },
@@ -25,20 +25,20 @@ const routes: Routes = [
     path: '',
     component: LoginComponent,
     children: [
-      {path: '', redirectTo: 'login', pathMatch: 'full'},
-      {path: 'login',component: LoginComponent},
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
     ]
   },
 
 
-  
+
   // { path: '', component: HomeComponent/*, canActivate: [AuthGuard]*/},
   // { path: 'home', component: HomeComponent/*, canActivate: [AuthGuard]*/},
   // { path: 'buscar-cep', component: BuscarComponent/*, canActivate: [AuthGuard]*/},
   // { path: 'login', component: LoginComponent/*, canActivate: [AuthGuard]*/},
-  
 
-  ];
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

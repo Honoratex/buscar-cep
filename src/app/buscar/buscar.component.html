@@ -4,7 +4,8 @@
             <img src="../../assets/img/location_icon.png" alt="rocket_contact" />
         </div>
 
-        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate">
+        </ngx-loading>
         <form>
             <h3>zip code</h3>
 
@@ -14,7 +15,11 @@
                 <div class="col-lg-10 input-group mb-3">
                     <input type="tel" class="form-control fristInput" id="cep" mask="00000-000" placeholder="00000-000" value="{{cep.cep}}" (blur)="buscarCep()">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary fristBtn" type="button" (click)="buscarCep()"><p style="transform: rotate(40deg);margin: 0;color: #a33acb;font-weight: bold;font-size: 22px;">&#9906;</p></button>
+                        <button class="btn btn-outline-secondary fristBtn" type="button" (click)="buscarCep()">
+                            <p
+                                style="transform: rotate(40deg);margin: 0;color: #a33acb;font-weight: bold;font-size: 22px;">
+                                &#9906;</p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -50,7 +55,8 @@
             </div>
 
             <div style="text-align: right;padding-top: 15px;">
-                <button class="btn btn-primary secondBtn" type="reset" (click)="limpar()" value="Limpar">Limpar Formulário</button>
+                <button class="btn btn-primary secondBtn" type="reset" (click)="limpar()" value="Limpar">Limpar
+                    Formulário</button>
             </div>
 
         </form>
