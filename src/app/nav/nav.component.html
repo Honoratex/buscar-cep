@@ -1,0 +1,23 @@
+<div id="mainContent" style="margin-left: 0%;background: linear-gradient(45deg, #0076ff, #00b9ff);position: fixed;z-index: 999;width: 100%;" style="margin-left: 0%;">
+    <div id="myCanvasNav" class="overlay3" (click)="closeOffcanvas()" style="width: 0%; opacity: 0;"></div>
+    <div id="myOffcanvas" class="offcanvas" style="width: 0%;">
+        <a class="closeOffcanvas" (click)="closeOffcanvas()">×</a>
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/buscar-cep']">Buscar Cep</a>
+        <a>Cadastrar Contato</a>
+        <a>Contatos</a>
+    </div>
+    <button style="font-size: 30px;
+    cursor: pointer;
+    background: none;    border: none;
+    
+    padding: 10px 25px;
+    color: #ffffff;" (click)="openNav3();openOffcanvas()"> &#9776; </button>
+
+    <button type="submit" class="btn btn-primary" style=" float: right; font-size: 30px;
+cursor: pointer;
+background: none;    border: none;
+
+padding: 10px 25px;
+color: #ffffff;" (click)="onLogout()"> &#9938;</button>
+</div>

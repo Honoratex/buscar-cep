@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="contact-form">
+        <div class="contact-image">
+            <img src="../../assets/img/location_icon.png" alt="rocket_contact" />
+        </div>
+
+        <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+        <form>
+            <h3>zip code</h3>
+
+            <div class="form-group row" style="margin-bottom: 0;">
+                <label for="cep" class="col-lg-2 col-form-label">Cep</label>
+
+                <div class="col-lg-10 input-group mb-3">
+                    <input type="tel" class="form-control fristInput" id="cep" mask="00000-000" placeholder="00000-000" value="{{cep.cep}}" (blur)="buscarCep()">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary fristBtn" type="button" (click)="buscarCep()"><p style="transform: rotate(40deg);margin: 0;color: #a33acb;font-weight: bold;font-size: 22px;">&#9906;</p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="logradouroValor" class="col-lg-2  col-form-label">Logradouro</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="logradouroValor" placeholder="Endereço, rua, av, vila..." value="{{cep.logradouro}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="bairroValor" class="col-lg-2 col-form-label">Bairro</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="bairroValor" placeholder="Bairro" value="{{cep.bairro}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="localidadeValor" class="col-lg-2 col-form-label">Localidade</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="localidadeValor" placeholder="Cidade" value="{{cep.localidade}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="ufValor" class="col-lg-2 col-form-label">Uf</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="ufValor" placeholder="Estado" value="{{cep.uf}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="complementoValor" class="col-lg-2 col-form-label">Complemento</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="complementoValor" placeholder="Bloco - A, Apto 1" value="{{cep.complemento}}">
+                </div>
+            </div>
+
+            <div style="text-align: right;padding-top: 15px;">
+                <button class="btn btn-primary secondBtn" type="reset" (click)="limpar()" value="Limpar">Limpar Formulário</button>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>

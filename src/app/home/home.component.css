@@ -1,0 +1,8 @@
+.container-mod {
+    background: none;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    min-height: 1px;
+    margin-bottom: 165px;
+}

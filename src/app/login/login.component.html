@@ -1,0 +1,31 @@
+<div class="containerr">
+    <div class="box">
+        <div class="contact-image" style="text-align: center;">
+            <img src="../../assets/img/user.png" alt="rocket_contact" style="border-radius: 6rem; width: 90px; margin-top: -35px; background: #ffffff; padding: 20px;" />
+        </div>
+        <form>
+            <h3 style="text-align: center;background: #0E0A19;-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-transform: uppercase;font-weight: bold;font-family: monospace;">Bem vindo</h3>
+
+            <div class="form-group " style="margin-bottom: 0;margin: 10px 20px;padding: 0;">
+                <label for="login">Login</label>
+                <div>
+                    <input type="text" class="form-control inputLogin" id="usuarioAng" name="user" required>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;margin: 10px 20px;padding: 0;">
+                <label for="password">Senha</label>
+                <div>
+                    <input type="password" class="form-control inputLogin" id="senhaAng" required>
+                </div>
+            </div>
+
+            <div style="text-align: center;padding-top: 50px;">
+                <button class="btn btn-primary secondBtn" (click)="loginAPI()">Entrar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer" style="position: fixed;bottom: 0;">
+        <p> HonoraTex <span style=" font-size: 12px; display: block; "> 2021 - © Todos os direitos reservados. </span></p>
+    </div>
+</div>

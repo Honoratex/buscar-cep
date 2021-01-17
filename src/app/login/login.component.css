@@ -1,0 +1,42 @@
+.containerr {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.box {
+    width: 350px;
+    height: 380px;
+    background: #fff;
+    border-radius: 1rem;
+}
+
+.secondBtn {
+    border-radius: 1rem !important;
+    background: linear-gradient(45deg, #4717F6, #A33ACB);
+    color: #ffffff;
+    width: 170px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.inputLogin {
+    background: #ffffff;
+    border-radius: 0px!important;
+    border-bottom: 1px solid #bfc5c6 !important;
+    border: 0px;
+    color: #6823e6;
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 80px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
